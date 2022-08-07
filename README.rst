@@ -2,7 +2,8 @@
 Test RST to Man
 ===============
 
-Just a test of creating manpages using reStructuredText_
+Just a test of creating manpages using reStructuredText_. After running
+``build.sh``, you can read it with ``man ./foo.69``.
 
 
 Requirements

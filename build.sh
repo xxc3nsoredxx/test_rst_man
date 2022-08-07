@@ -1,7 +1,7 @@
 #! /bin/bash
 
 RST2MAN="$(command -v rst2man.py)"
-TARGET="$(dirname "$0")/test.1"
+TARGET="$(dirname "$0")/foo.69"
 SRC="$TARGET.rst"
 
 die () {
