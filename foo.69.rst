@@ -6,10 +6,12 @@ Foo
 A test manpage
 --------------
 
-:Author: Oskari Pirhonen <xxc3ncoredxx@gmail.com>
+:Authors:
+    - Oskari Pirhonen <xxc3ncoredxx@gmail.com>
+    - Jane Doe <jdoe@example.com>
 :Date: 2022-08-06
 :Copyright: Public Domain
-:Version: 1
+:Version: 1.1
 :Manual section: 69
 :Manual group: Nice
 
@@ -17,8 +19,9 @@ A test manpage
 Synopsis
 ========
 
-.. TODO:
-    - is there a better way to denote *file* and such?
+..
+  - groff_man(7) states to use the .I macro (italic text) for file paths, user-
+    defined components of args, etc
 
 | ``foo`` [options_] *file*
 | ``foo exterminate`` *file*
@@ -63,6 +66,44 @@ Cool options
 --why-dont-you-take-this-key-and-shove-it-up-your-ass-sideways
     Jump starts your RV, skipping the arduous process of creating a battery
     using Chemicals (TM).
+
+
+Config File
+===========
+
+``foo`` doesn't have a config file, but if it did, it'd probably look something
+like this. The syntax will feel right at home with anyone familiar with Bash.
+
+
+Example config
+--------------
+
+.. code:: bash
+
+    # Paths you would like foo(1) to not handle. This list may or may not be
+    # respected.
+    IGNORE_PATHS=(
+        '/path/to/dir1'
+        '/path/to/dir2'
+    )
+
+
+Comparison with Common Tools
+============================
+
+People familiar with other file administrations tools may like to know how they
+compare to ``foo``.
+
+.. NOTE::
+    This table is incomplete.
+
+==============================  ===  =====  =========
+       Feature                  foo  rsync  Timeshift
+==============================  ===  =====  =========
+Can be hacked remotely          No    Yes   Not sure
+Can provide files to the Enemy  No    Yes   Maybe????
+Approved by the System          Yes   No       No
+==============================  ===  =====  =========
 
 
 Files
